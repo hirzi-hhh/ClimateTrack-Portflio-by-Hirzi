@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="ko" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>히르지 (Hirzi) - 프런트엔드 개발자 포트폴리오</title>
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Font (Inter) -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Noto+Sans+KR:wght@400;500;700&display=swap');
+        
+        /* Tailwind 기본 폰트를 Inter와 Noto Sans KR로 설정 */
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Inter', 'Noto Sans KR', 'sans-serif'],
+                    },
+                },
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-800 font-sans antialiased">
+
+    <!-- ===== Navigation ===== -->
+    <nav class="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm shadow-sm">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Logo -->
+                <div class="flex-shrink-0 flex items-center">
+                    <span class="text-2xl font-bold text-gray-900">히르지 (Hirzi)</span>
+                </div>
+                <!-- Navigation Links -->
+                <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-blue-600 inline-flex items-center px-1 pt-1 text-sm font-medium">About</a>
+                    <a href="#skills" class="text-gray-600 hover:text-blue-600 inline-flex items-center px-1 pt-1 text-sm font-medium">Skills</a>
+                    <a href="#project" class="text-gray-600 hover:text-blue-600 inline-flex items-center px-1 pt-1 text-sm font-medium">Project</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- ===== Hero Section ===== -->
+    <header id="about" class="relative overflow-hidden pt-20 pb-24 md:pt-32 md:pb-32">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col md:flex-row items-center gap-12">
+                <!-- Profile Image -->
+                <div class="flex-shrink-0">
+                    <img class="h-40 w-40 md:h-48 md:w-48 rounded-full shadow-xl object-cover" 
+                         src="https://github.com/hirzi-hhh/hirzi-hhh/blob/main/profile-pic%202.png?raw=true" 
+                         onerror="this.src='https://placehold.co/192x192/e0e0e0/333?text=Hirzi'"
+                         alt="히르지 프로필 이미지">
+                </div>
+                <!-- Hero Text -->
+                <div class="flex-1 text-center md:text-left">
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-900 tracking-tight">
+                        히르지 (Hirzi)
+                    </h1>
+                    <p class="mt-4 text-xl md:text-2xl text-blue-600 font-medium">
+                        문제를 해결하고 더 나은 솔루션을 구현하여 모두에게 더 지능적인 인터넷 환경을 제공하는 프런트엔드 개발자입니다.
+                    </p>
+                    <!-- Contact Links -->
+                    <div class="mt-8 flex justify-center md:justify-start space-x-6">
+                        <a href="mailto:hirziirsyad2@gmail.com" class="text-gray-500 hover:text-blue-600" title="Email">
+                            <span class="sr-only">Email</span>
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"></path></svg>
+                        </a>
+                        <a href="https://github.com/hirzi-hhh" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600" title="GitHub">
+                            <span class="sr-only">GitHub</span>
+                            <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19c-4.3 1.4-4.3-2.5-6-3m12 5v-3.5c0-1 .1-1.4-.5-2 2.8-.3 5.5-1.4 5.5-6.1 0-1.3-.5-2.4-1.3-3.2.1-.3.5-1.5-.1-3.2 0 0-1.1-.3-3.5 1.3a12.3 12.3 0 00-6.2 0C6.5 2.8 5.4 3.1 5.4 3.1c-.6 1.7-.2 2.9-.1 3.2-.8.8-1.3 1.9-1.3 3.2 0 4.7 2.7 5.8 5.5 6.1-.6.5-1 1.4-1 2.8v3.5"></path></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hirzi-irsyad-bin-hipni-aa1a8b312" target="_blank" rel="noopener noreferrer" class="text-gray-500 hover:text-blue-600" title="LinkedIn">
+                            <span class="sr-only">LinkedIn</span>
+                            <svg class="w-7 h-7" fill="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z"></path></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- About Me Details -->
+            <div class="mt-20 md:mt-28 max-w-4xl mx-auto">
+                <h2 class="text-3xl font-bold text-gray-900 text-center">About Me</h2>
+                <div class="mt-8 space-y-5 text-gray-700 leading-relaxed text-left">
+                    <p>
+                        저는 빠르게 발전하는 기술 속에서 현실의 문제를 기술로 해결하고 단순화하는 과정에 큰 흥미를 느끼는 학생 개발자입니다. 복잡한 문제를 사용자에게 의미 있고 직관적인 디지털 경험으로 바꾸는 일을 즐깁니다.
+                    </p>
+                    <p>
+                        끊임없는 호기심과 성장에 대한 열정으로 개발자로서뿐 아니라 리더로서의 역량 또한 확장해 나가고 있습니다. 공동체와 기술의 간극을 줄이고, 더 포용적이고 지능적인 디지털 세상을 만들어 가는 것이 저의 목표입니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- ===== Skills Section ===== -->
+    <section id="skills" class="bg-white py-20 md:py-28">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-gray-900 text-center">Skills</h2>
+            <div class="mt-12 grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Frontend -->
+                <div class="bg-gray-50 rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-gray-900">Frontend</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="skill-badge bg-yellow-100 text-yellow-800">JavaScript</span>
+                        <span class="skill-badge bg-blue-100 text-blue-800">TypeScript</span>
+                        <span class="skill-badge bg-cyan-100 text-cyan-800">React</span>
+                        <span class="skill-badge bg-gray-200 text-gray-800">Next.js</span>
+                        <span class="skill-badge bg-sky-100 text-sky-800">Tailwind CSS</span>
+                    </div>
+                </div>
+                <!-- Backend -->
+                <div class="bg-gray-50 rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-gray-900">Backend</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="skill-badge bg-green-100 text-green-800">Node.js</span>
+                        <span class="skill-badge bg-green-200 text-green-900">MongoDB</span>
+                        <span class="skill-badge bg-lime-100 text-lime-800">Spring Boot</span>
+                    </div>
+                </div>
+                <!-- DevOps & Tools -->
+                <div class="bg-gray-50 rounded-xl shadow-lg p-6">
+                    <h3 class="text-xl font-semibold text-gray-900">DevOps & Tools</h3>
+                    <div class="mt-4 flex flex-wrap gap-2">
+                        <span class="skill-badge bg-red-100 text-red-800">Git</span>
+                        <span class="skill-badge bg-purple-100 text-purple-800">Figma</span>
+                        <span class="skill-badge bg-orange-100 text-orange-800">AWS S3</span>
+                        <span class="skill-badge bg-orange-200 text-orange-900">AWS EC2</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Project Section ===== -->
+    <section id="project" class="py-20 md:py-28 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-900">Project Spotlight</h2>
+                <p class="mt-3 text-2xl font-semibold text-blue-600">
+                    ClimateTrack — 커뮤니티 기반 자연재해 경보 플랫폼
+                </p>
+            </div>
+
+            <!-- Problem Definition -->
+            <div class="mt-16 bg-white p-8 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6">문제 정의 (Problem)</h3>
+                <div class="flex flex-col md:flex-row items-center gap-8">
+                    <div class="flex-shrink-0">
+                        <img class="h-32 w-32 object-contain" 
+                             src="https://github.com/hirzi-hhh/hirzi-hhh/blob/16bdf81e5e114a64562817555d88eead46ff768c/climatetrack%20icon.png?raw=true" 
+                             onerror="this.src='https://placehold.co/128x128/e0e0e0/333?text=Icon'"
+                             alt="ClimateTrack 아이콘">
+                    </div>
+                    <div class="flex-1 text-gray-700 space-y-4 leading-relaxed">
+                        <p>
+                            기존의 자연재해 관련 정보는 뉴스, SNS, 정부 기관 사이트 등 여러 플랫폼에 분산되어 있어, 사용자가 재난 발생 시 즉각적으로 필요한 정보를 얻기 어렵다는 문제가 있었습니다.
+                        </p>
+                        <p>
+                            이로 인해 대응이 늦어지고, 재난 상황에 대한 지역 사회의 인식과 대응 효율성이 떨어지는 한계가 있었습니다. ClimateTrack은 이러한 문제를 해결하기 위해, 분산된 재난 정보를 통합·시각화하고 사용자 위치 기반으로 맞춤형 알림을 제공하는 커뮤니티 중심의 통합 재난 대응 시스템으로 기획되었습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Architecture -->
+            <div class="mt-12 bg-white p-8 rounded-xl shadow-lg">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-6">아키텍처/설계 (Architecture)</h3>
+                <p class="text-gray-700 leading-relaxed mb-6">
+                    ClimateTrack의 시스템은 데이터 수집 → 처리 및 저장 → 알림 → 시각화의 4단계 구조로 설계되었습니다.
+                    외부 API로부터 실시간 기상·재난 데이터를 수집하고, Spring Boot 기반 백엔드 서버가 이를 처리하여 MongoDB에 저장합니다.
+                    백엔드에서는 사용자 위치와 재난 발생 지점을 비교하여, 지정 반경(예: 10km 이내)에 해당할 경우 푸시 알림을 자동으로 전송하는 로직을 구현했습니다.
+                    수집된 데이터는 React Native 기반 모바일 앱과 웹 대시보드에서 지도 및 커뮤니티 기능으로 시각화되어 제공됩니다.
+                    전체 시스템은 자동화된 데이터 흐름을 통해 실시간 재난 감지 및 대응이 가능하며, 개인 사용자뿐 아니라 기관에서도 활용 가능한 지능형 재난 정보 통합 플랫폼으로 설계되었습니다.
+                </p>
+                <img class="w-full h-auto rounded-lg shadow-md border border-gray-200"
+                     src="https://github.com/hirzi-hhh/hirzi-hhh/blob/main/climatetrack%20pic1.png?raw=true" 
+                     onerror="this.src='https://placehold.co/1024x576/e0e0e0/333?text=Architecture+Diagram'"
+                     alt="ClimateTrack 아키텍처 다이어그램">
+            </div>
+
+            <!-- Core Features -->
+            <div class="mt-12">
+                <h3 class="text-2xl font-semibold text-gray-900 mb-8 text-center">핵심 기능 (Core Features)</h3>
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+                    <!-- Feature 1 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h4 class="text-lg font-semibold text-blue-700">실시간 재난 데이터 수집 및 통합</h4>
+                        <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                            외부 기상청 및 재난 관련 API를 주기적으로 호출하여 최신 데이터를 수집하고, Spring Boot 백엔드 서버에서 데이터 파싱 및 구조화 과정을 거쳐 MongoDB에 저장했습니다. Sheduler를 활용한 자동화된 데이터 갱신 구조를 설계하여, 사용자는 언제나 최신 재난 정보를 확인할 수 있습니다.
+                        </p>
+                    </div>
+                    <!-- Feature 2 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h4 class="text-lg font-semibold text-blue-700">사용자 위치 기반 푸시 알림 시스템</h4>
+                        <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                            사용자의 위치 정보와 재난 발생 지점을 비교하여, 지정된 반경(예: 10km 이내)에 포함될 경우 Firebase Cloud Messaging (FCM)을 통해 푸시 알림을 전송하도록 구현했습니다. 이 기능을 통해 사용자는 재난 발생 시 즉각적인 알림을 받을 수 있으며, 백엔드에서 조건을 자동 판단하여 실시간 대응 시스템을 구축했습니다.
+                        </p>
+                    </div>
+                    <!-- Feature 3 -->
+                    <div class="bg-white p-6 rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300">
+                        <h4 class="text-lg font-semibold text-blue-700">커뮤니티 및 시각화 대시보드</h4>
+                        <p class="mt-3 text-gray-600 text-sm leading-relaxed">
+                            모바일 앱과 웹 대시보드를 통해 사용자가 재난 상황을 지도 기반으로 시각적으로 확인할 수 있도록 설계했습니다. 또한 지역 커뮤니티 기능을 도입하여, 사용자가 직접 재난 상황을 공유하거나 의견을 나눌 수 있게 하여 참여형 정보 생태계를 구축했습니다.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Role & Contributions, Results, Retrospective -->
+            <div class="mt-12 grid grid-cols-1 lg:grid-cols-3 gap-6">
+                <!-- My Role -->
+                <div class="bg-white p-8 rounded-xl shadow-lg">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">나의 역할 및 기여</h3>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-gray-700 leading-relaxed">
+                        <li>사용자 간 소통이 가능한 커뮤니티 페이지 기능 구현</li>
+                        <li>사용자 위치를 기반으로 주변 게시글을 표시하는 근접 커뮤니티 피드 페이지 개발</li>
+                        <li>앱의 메인 UI/UX 디자인 설계, 특히 홈 화면에서 사용자 제보 및 공식 보도 내용을 색상 마커로 표시하는 인터랙티브 지도 화면 구현</li>
+                        <li>아이콘 디자인 및 시각적 아이덴티티 구성</li>
+                        <li>위 기능들에 필요한 백엔드 API 및 데이터 처리 로직 구현 (Spring Boot 기반)</li>
+                    </ul>
+                </div>
+
+                <!-- Results -->
+                <div class="bg-blue-50 p-8 rounded-xl shadow-lg border border-blue-200">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">결과 및 성과</h3>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-blue-800 leading-relaxed">
+                        <li>실시간 데이터 자동 업데이트 주기 1분 단위로 안정화 가능</li>
+                        <li>사용자 위치 기반 알림 정확도 90% 이상 달성</li>
+                        <li>심플하고 직관적인 UI 설계로 사용자가 쉽게 접근하고 이용할 수 있는 인터페이스 구현</li>
+                        <li>시연 평가에서 “데이터 구조와 알림 시스템의 완성도” 및 “UI의 명확성과 사용 편의성”에 대해 긍정적 피드백 수령</li>
+                    </ul>
+                </div>
+
+                <!-- Learnings -->
+                <div class="bg-green-50 p-8 rounded-xl shadow-lg border border-green-200">
+                    <h3 class="text-2xl font-semibold text-gray-900 mb-6">회고 (배운 점)</h3>
+                    <ul class="list-disc list-outside ml-5 space-y-3 text-green-800 leading-relaxed">
+                        <li>실시간 데이터 처리와 비동기 통신 구조의 중요성을 이해하고, Spring Boot의 스케줄링과 REST 통신 구조를 깊이 있게 다룰 수 있었습니다.</li>
+                        <li>프런트엔드와 백엔드 간의 데이터 흐름을 실시간 API 기반으로 연결하며, 실제 환경에서 데이터가 어떻게 교환되고 처리되는지에 대해 많은 경험을 쌓았습니다.</li>
+                        <li>사용자 중심의 UI 설계에 대해 더 깊이 배우며, 디자인의 심미성과 사용성(Usability)의 균형을 유지하는 방법을 익혔습니다.</li>
+                        <li>커뮤니티 중심의 앱을 개발하면서, 사용자 참여를 유도하고 공동체의 상호작용을 촉진하는 설계 방식의 중요성을 깨달았습니다.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ===== Footer ===== -->
+    <footer class="bg-gray-900 text-gray-400 py-10">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <p>&copy; 2025 히르지 (Hirzi). All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Custom CSS for Skill Badges -->
+    <style>
+        .skill-badge {
+            display: inline-block;
+            border-radius: 9999px;
+            padding: 0.25rem 0.75rem;
+            font-size: 0.875rem; /* 14px */
+            font-weight: 500;
+        }
+    </style>
+</body>
+</html>
